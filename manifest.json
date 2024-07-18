@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Progressive Technology Accessibility CSS Enforcer",
+  "version": "1.0",
+  "description": "Enforces custom CSS on all websites to improve Accessibility.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/GroupSoftwareIcon16.png",
+      "48": "images/GroupSoftwareIcon48.png",
+      "128": "images/GroupSoftwareIcon128.png"
+    }
+  }
+}
+ 
