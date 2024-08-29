@@ -1,24 +1,3 @@
-ep-shell .ep-grid .k-grid td span.ep-grid-cell.ep-row-rule-warning {
-    background-color: yellow !important;
-}
-
-ep-shell .ep-grid .k-grid td span.ep-grid-cell.ep-row-rule-success {
-    background-color: green !important;
-}
-
-ep-shell .ep-grid .k-grid tr td span.ep-grid-cell.ep-row-rule-error {
-    background-color: purple !important;
-}
-
-ep-shell .ep-grid .k-grid tr td .ep-grid-cell.ep-row-rule-error.ep-grid-cell.ep-row-rule-error {
-    color: white;
-}
-
-ep-shell .ep-grid .k-grid tr td, .ep-grid .k-grid tr {
-    padding: 0 0 0 0;
-    box-sizing: border-box;
-}
-
 .ep-menu-bar-container {
     background-color: purple !important;
 }

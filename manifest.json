@@ -12,21 +12,18 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*/kinetic/*", "*://*/Kinetic/*"],
+      "matches": ["<all_urls>"],
       "css": ["styles.css"],
-      "js": ["content.js"]
-    },
-    {
-      "matches": ["*://*/kinetictest/*"],
-      "css": ["testStyles.css"],
-      "js": ["content.js"]
-    },
-    {
-      "matches": ["*://*/kineticdev/*", "*://*/KineticDev/*"],
-      "css": ["devStyles.css"],
       "js": ["content.js"]
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "testStyles.css", "devStyles.css", "liveStyles.css" ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": ["*://*/*"],
   "action": {
     "default_icon": {
       "16": "images/GroupSoftwareIcon16.png",
