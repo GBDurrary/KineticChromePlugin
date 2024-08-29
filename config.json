@@ -1,0 +1,7 @@
+{
+  "dev_url_part": "kineticdev",
+  "test_url_part": "kinetictest",
+  "pilot_url_part": "kineticpilot",
+  "live_url_part": "kinetic"
+}
+ 

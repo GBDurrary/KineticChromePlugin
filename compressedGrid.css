@@ -1,0 +1,4 @@
+ep-shell .ep-grid .k-grid tr td, .ep-grid .k-grid tr {
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}

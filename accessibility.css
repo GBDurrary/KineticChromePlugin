@@ -1,0 +1,11 @@
+p, td, th, button, span, a {
+    font-size: x-large !important;
+    font-weight: bold !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: normal !important;
+}
+
+ep-shell .ep-grid .k-grid tr td, .ep-grid .k-grid tr {
+    padding: 10px !important;
+    box-sizing: border-box !important;
+}
