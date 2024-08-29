@@ -2,7 +2,6 @@ const loadStyles = function() {
     fetch (chrome.runtime.getURL('config.json'))
     .then(response => response.json())
     .then(config => {
-        console.log(config);
         var currentUrl = window.location.href.toLowerCase();
         var stylesFile = 'liveStyles.css'; 
         if (currentUrl.includes(config["test_url_part"])) {
