@@ -90,3 +90,40 @@ If adding toggleable styles, this is currently done directly in the popup for th
 - Pull the new option into the content.js file
 - Toggle adding the new styles absed on the option
 
+## Alternative routing
+There is an alternative way to get the environment styles to show up. Replacing the environmental code within content.js and handling in the manifest.
+The manifest will look something like the following:
+```
+{
+  "manifest_version": 3,
+  "name": ...,
+  "version": ...,
+  "description": ...,
+  "permissions": [ ... ],
+  "background": { ... },
+  "content_scripts": [
+    {
+      "matches": ["*://*/kinetic/*", "*://*/Kinetic/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["*://*/kinetictest/*"],
+      "css": ["testStyles.css"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["*://*/kineticdev/*", "*://*/KineticDev/*"],
+      "css": ["devStyles.css"],
+      "js": ["content.js"]
+    },
+    ...
+  ],
+  "action": {
+    ...
+  }
+  }
+}
+```
+This will apply all stylesheets within the "css" section onto the page without anything else required. Further styles can still be added from the content.js.
+However it is important to note that the "matches" values are case sensitive, and as such KineticDev =/= kineticDev =/= kineticdev etc. 
